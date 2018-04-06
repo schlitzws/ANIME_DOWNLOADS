@@ -1,26 +1,9 @@
-###The below assumes you have already installed python 3..###
-<<<<<<< HEAD
-
 ###In order for you to use this script you will need to install the selenium library.
-
 ###The easiest way for you to do this is to use pip in powershell/linux/Mac: pip install selenium
-
-###(not exactly sure about the Mac, please do your own research.)
-
-###once that is done you have to install a webdriver from googlechrome, firefox, edge, or ie.
-
-###put the path to the file in your env variables ### windows
-
-###put the path in your ~/.profile file in your home dir ### linux
-
-=======
-###In order for you to use this script you will need to install the selenium library.
-###The easiest way for you to do this is to use pip in powershell/linux/Mac: pip install selenium 
 ###(not exactly sure about the Mac, please do your own research.)
 ###once that is done you have to install a webdriver from googlechrome, firefox, edge, or ie.
 ###put the path to the file in your env variables ### windows
 ###put the path in your ~/.profile file in your home dir ### linux
->>>>>>> 1dee114c8dbaf75f0a183d2cf35c305b53a2dad1
 ###might be the same as above for mac but I'm not entirely sure.
 
 from selenium import webdriver
@@ -43,7 +26,12 @@ def download():
             time.sleep(15)
     driver.quit()
 
+bfla =  """
+    Before listing Anime, please note in order for you to download the anime you will need to know the URI after /series/ in the listed anime.
+    """
+
 def listAnime():
+    global bfla
 ##    chrome_options = Options()
 ##    chrome_options.add_argument("--headless")
 ##    driver = webdriver.Chrome(chrome_options=chrome_options)
@@ -53,9 +41,7 @@ def listAnime():
     #anime_list = driver.find_element_by_xpath('//*[@id="content_container"]/div[2]/table/tbody/tr/td/div/p[1]')
     anime_list = driver.find_elements_by_css_selector("#content_container > div.floatbox > table > tbody > tr > td > div > p:nth-child(2) > a")
     #a = driver.find_elements_by_tag_name("a")
-    print( """
-    Before listing Anime, please note in order for you to download the anime you will need to know the URI after /series/ in the listed anime.
-    """)
+    print(bfla)
     time.sleep(10)
     counter = 0
     for i in anime_list:
@@ -70,10 +56,7 @@ def listAnime():
                 break
     driver.quit()
 
-while(True):
-    init_input = input("Please input what you would like to do next, h for the help.")
-    if init_input == "h":
-        print("""
+hm = """
 
             Help Menu for Need Anime Program - Written by SWS
 
@@ -85,7 +68,11 @@ while(True):
            w key - Watches the anime from the target anime that you input.
            q key - To quit the program.
 
-        """)
+        """
+while(True):
+    init_input = input("Please input what you would like to do next, h for the help.")
+    if init_input == "h":
+        print(hm)
     elif init_input == "l":
         listAnime()
     elif init_input == "d":
