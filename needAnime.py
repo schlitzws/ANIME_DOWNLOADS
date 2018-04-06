@@ -1,3 +1,12 @@
+###The below assumes you have already installed python 3..###
+###In order for you to use this script you will need to install the selenium library.
+###The easiest way for you to do this is to use pip in powershell/linux/Mac: pip install selenium 
+###(not exactly sure about the Mac, please do your own research.)
+###once that is done you have to install a webdriver from googlechrome, firefox, edge, or ie.
+###put the path to the file in your env variables ### windows
+###put the path in your .bashrc file in your home dir ### linux
+###might be the same as above for mac but I'm not entirely sure.
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
