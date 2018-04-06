@@ -1,4 +1,5 @@
 ###The below assumes you have already installed python 3..###
+<<<<<<< HEAD
 
 ###In order for you to use this script you will need to install the selenium library.
 
@@ -12,6 +13,14 @@
 
 ###put the path in your ~/.profile file in your home dir ### linux
 
+=======
+###In order for you to use this script you will need to install the selenium library.
+###The easiest way for you to do this is to use pip in powershell/linux/Mac: pip install selenium 
+###(not exactly sure about the Mac, please do your own research.)
+###once that is done you have to install a webdriver from googlechrome, firefox, edge, or ie.
+###put the path to the file in your env variables ### windows
+###put the path in your ~/.profile file in your home dir ### linux
+>>>>>>> 1dee114c8dbaf75f0a183d2cf35c305b53a2dad1
 ###might be the same as above for mac but I'm not entirely sure.
 
 from selenium import webdriver
