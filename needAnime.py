@@ -1,12 +1,28 @@
+###The below assumes you have already installed python 3..###
+
+###In order for you to use this script you will need to install the selenium library.
+
+###The easiest way for you to do this is to use pip in powershell/linux/Mac: pip install selenium
+
+###(not exactly sure about the Mac, please do your own research.)
+
+###once that is done you have to install a webdriver from googlechrome, firefox, edge, or ie.
+
+###put the path to the file in your env variables ### windows
+
+###put the path in your ~/.profile file in your home dir ### linux
+
+###might be the same as above for mac but I'm not entirely sure.
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 
 def download():
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome(chrome_options=chrome_options)
-    #driver = webdriver.Chrome()
+##    chrome_options = Options()
+##    chrome_options.add_argument("--headless")
+##    driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver = webdriver.Chrome()
     target_anime = input("Please enter the name of the anime you want delimited by '-' character like :: battle-programmer-shirase")
     url = "https://anime.thehylia.com/downloads/series/" + target_anime
     driver.get(url)
@@ -19,10 +35,10 @@ def download():
     driver.quit()
 
 def listAnime():
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome(chrome_options=chrome_options)
-    #driver = webdriver.Chrome()
+##    chrome_options = Options()
+##    chrome_options.add_argument("--headless")
+##    driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver = webdriver.Chrome()
     url = "https://anime.thehylia.com/downloads/browse/all"
     driver.get(url)
     #anime_list = driver.find_element_by_xpath('//*[@id="content_container"]/div[2]/table/tbody/tr/td/div/p[1]')
