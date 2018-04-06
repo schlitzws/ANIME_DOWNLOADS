@@ -4,7 +4,7 @@
 ###(not exactly sure about the Mac, please do your own research.)
 ###once that is done you have to install a webdriver from googlechrome, firefox, edge, or ie.
 ###put the path to the file in your env variables ### windows
-###put the path in your .bashrc file in your home dir ### linux
+###put the path in your ~/.profile file in your home dir ### linux
 ###might be the same as above for mac but I'm not entirely sure.
 
 from selenium import webdriver
